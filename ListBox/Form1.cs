@@ -2,6 +2,7 @@ namespace ListBox
 {
     public partial class Form1 : Form
     {
+        Form2 form2 = new Form2();
         public Form1()
         {
             InitializeComponent();
@@ -9,6 +10,7 @@ namespace ListBox
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            form2.ShowDialog();
             switch (listBox1.Text)
             {
                 case "Red":
@@ -24,7 +26,6 @@ namespace ListBox
                     this.BackColor = Color.Yellow;
                     break;
             }
-
         }
 
         private void button1_Click(object sender, EventArgs e)
